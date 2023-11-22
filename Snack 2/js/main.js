@@ -3,65 +3,65 @@
 // DATA
 const teams = [
     {
-        'Name': 'Juventus',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Juventus',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'AC Milan',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'AC Milan',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'Inter Milan',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Inter Milan',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'Napoli',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Napoli',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'Roma',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Roma',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'Lazio',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Lazio',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'Fiorentina',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Fiorentina',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'Atalanta',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Atalanta',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'Sassuolo',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Sassuolo',
+        goals: 0,
+        fouls: 0
     },
     {
-        'Name': 'Torino',
-        'Goals Scored': 0,
-        'Fouls Suffered': 0
+        name: 'Torino',
+        goals: 0,
+        fouls: 0
     }
 ];
 
 // EXECUTION
 // Assign random goals & fouls between 0 and 10
 teams.forEach(team => {
-    team["Goals Scored"] = Math.floor(Math.random() * 11);
-    team["Fouls Suffered"] = Math.floor(Math.random() * 11);
+    team['goals'] = Math.floor(Math.random() * 11);
+    team['fouls'] = Math.floor(Math.random() * 11);
 });
 
 // Create new names & fouls array
-const teamsNew = teams.map(({ Name, "Fouls Suffered": Fouls }) => ({ Name, Fouls }));
+const teamsNew = teams.map(({ name, fouls }) => ({ name, fouls }));
 
 console.log(teamsNew);
