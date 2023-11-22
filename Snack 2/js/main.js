@@ -1,5 +1,6 @@
 'use strict';
 
+// DATA
 const teams = [
     {
         'Name': 'Juventus',
@@ -52,3 +53,15 @@ const teams = [
         'Fouls Suffered': 0
     }
 ];
+
+// EXECUTION
+// Assign random goals & fouls between 0 and 10
+teams.forEach(team => {
+    team["Goals Scored"] = Math.floor(Math.random() * 11);
+    team["Fouls Suffered"] = Math.floor(Math.random() * 11);
+});
+
+// Create new names & fouls array
+const teamsNew = teams.map(({ Name, "Fouls Suffered": Fouls }) => ({ Name, Fouls }));
+
+console.log(teamsNew);
