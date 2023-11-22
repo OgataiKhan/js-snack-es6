@@ -28,14 +28,28 @@ const racingBicycles = [
     },
 ];
 
+// EXECUTION
 let lightestBike = racingBicycles[0];
 
+// Find one of the lightest bicycles
 racingBicycles.forEach(bike => {
     if (bike.weight < lightestBike.weight) {
         lightestBike = bike;
     }
 });
+// Save lightest weight as a variable
+const { weight: lightestBikeWeight } = lightestBike;
 
-const lightestBikeWeight = lightestBike.weight;
-const lightestBikesArray = racingBicycles.filter(bike => bike.weight === lightestBikeWeight);
+// Create an array of all the bicycles with the lowest weight
+const lightestBikesArray = racingBicycles.filter(({ weight }) => weight === lightestBikeWeight);
 
+// Select the ol in the html
+const list = document.getElementById('content');
+// Initialize an empty content variable
+let listContent = '';
+// Add li elements to content
+lightestBikesArray.forEach(({ name, weight }) => {
+    listContent += `<li>${name}, with a weight of ${weight} kg</li>`;
+});
+// Add content to the html
+list.innerHTML = listContent;
