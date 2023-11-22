@@ -64,4 +64,5 @@ teams.forEach(team => {
 // Create new names & fouls array
 const teamsNew = teams.map(({ name, fouls }) => ({ name, fouls }));
 
+console.log(teams);
 console.log(teamsNew);
