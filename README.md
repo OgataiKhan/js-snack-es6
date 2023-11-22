@@ -20,3 +20,9 @@ This script will generate random numbers of "Goals Scored" and "Fouls Suffered" 
 2. Use forEach() to assign random integers between 0 and 10 to the "Goals Scored" and "Fouls Suffered" of each team.  
 3. Use map() to create a teamsNew array that only includes team names and fouls. 
 4. Print the new array into the console.   
+
+## Snack 3
+
+This is a function that accepts three arguments, an array and two numbers (the first number must be lower than the second), and returns a new array that includes all the elements from the input array whose position is incuded between the two numbers. The two boundaries are included.
+
+1. Use fiter() to create the new array, imposing the conditions on the index.
